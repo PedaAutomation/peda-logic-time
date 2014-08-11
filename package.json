@@ -1,0 +1,16 @@
+{
+  "name": "peda-logic-time",
+  "description": "Time logic module for Peda",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": {
+    "name": "Julius Möller",
+    "email": "the.porenta@web.de"
+  },
+  "dependencies": {
+    "coffee-script": "^1.7.1",
+    "timezoner": "^0.1.7",
+    "timezone": "^0.0.34",
+    "request": "^2.40.0 "
+  }
+}

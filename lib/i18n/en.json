@@ -1,0 +1,6 @@
+{
+  "timeHere": "/(What's|what is) the time/gi",
+  "time": "/(What's|what is) the time in (.+)/gi",  
+  "locale": "en_US",
+  "outputFormat": "It's %h %m"
+}

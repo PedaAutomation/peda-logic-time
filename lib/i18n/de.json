@@ -1,0 +1,6 @@
+{
+  "timeHere": "/Wie (spät|viel uhr) ist es/gi",
+  "time": "/Wie (spät|viel uhr) ist es in (.+)/gi",  
+  "locale": "de_DE",
+  "outputFormat": "Es ist %h Uhr %m"
+}
