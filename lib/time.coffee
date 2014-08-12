@@ -24,7 +24,7 @@ getTimeIn = (place, helper, cb) ->
     temp = temp[1].split ":"
     zero = temp[0].indexOf("0")
     if zero isnt -1
-      temp[0] = temp[0].substring zero, zero+1
+      temp[0] = temp[0].substring zero+1, zero+2
     result = helper.__("outputFormat").replace("%h", temp[0]).replace("%m", temp[1])
     cb result
 
