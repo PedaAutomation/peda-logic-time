@@ -22,8 +22,9 @@ getTimeIn = (place, helper, cb) ->
     temp = tz utc, '%c', helper.__("locale"), zoneId 
     temp = temp.split now.getFullYear() #crazy things happen if the year is x and in the destination timezone x+1 (if it's silvester/new year)  
     temp = temp[1].split ":"
-    if temp[0].indexOf("0") is 0
-      temp[0] = temp[0].substring 1, 2
+    zero = temp[0].indexOf("0")
+    if zero isnt -1
+      temp[0] = temp[0].substring zero, zero+1
     result = helper.__("outputFormat").replace("%h", temp[0]).replace("%m", temp[1])
     cb result
 
