@@ -1,4 +1,4 @@
-time = require './time.coffee'
+timeInfo = require './time.coffee'
 
 german = require './i18n/de.json'
 english = require './i18n/en.json'
@@ -6,14 +6,14 @@ english = require './i18n/en.json'
 defaultPlace = process.env.DEFAULT_TIME_PLACE
 
 timeHere = (data, slave) -> 
-  output = time.getTimeIn defaultPlace, slave, (output) ->
+  output = timeInfo.getTimeIn defaultPlace, slave, (output) ->
     slave.sendOutputToCapability(output, "tts")
 
 time = (data, slave) ->
   command = data.capability.split(":")[1]
   input = data.command
   regex = slave.__(command)
-  output = time.getTimeIn regex.exec(input)[1], slave, (output) ->
+  output = timeInfo.getTimeIn regex.exec(input)[1], slave, (output) ->
     slave.sendOutputToCapability(output, "tts")
   
 
