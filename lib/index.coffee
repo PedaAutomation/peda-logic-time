@@ -11,7 +11,7 @@ timeHere = (data, slave) ->
 
 time = (data, slave) ->
   command = data.capability.split(":")[1]
-  input = data.command
+  input = data.command.command
   regex = slave.__regex(command)
   output = timeInfo.getTimeIn regex.exec(input)[1], slave, (output) ->
     slave.sendOutputToCapability(output, "tts")
